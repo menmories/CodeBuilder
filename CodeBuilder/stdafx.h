@@ -4,6 +4,10 @@
 //
 
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
+
+#pragma warning(disable: 4217)
+#pragma warning(disable: 4091)
 
 #include "targetver.h"
 
@@ -23,3 +27,11 @@
 #include <atlstr.h>
 
 // TODO:  在此处引用程序需要的其他头文件
+#include <UIlib.h>
+#ifdef _DEBUG
+#pragma comment(lib, "Duilib_d.lib")
+#else
+#pragma comment(lib, "Duilib.lib")
+#endif
+
+using namespace DuiLib;
